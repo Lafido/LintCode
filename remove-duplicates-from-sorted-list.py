@@ -17,8 +17,8 @@ class Solution:
     """
     def deleteDuplicates(self, head):
         p = head
-        while p and p.next:
-            if p.next.val == p.val:
+        while p :
+            while p and p.next and p.next.val == p.val:
                 p.next = p.next.next
             p = p.next
         return head
